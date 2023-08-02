@@ -17,6 +17,7 @@ namespace GestionPrestamosBiblioteca.Models
         public DateTime FechaAlta { get; set; }
         [Required]
         public bool Prestado { get; set; }
+        public int ISBN { get; set; }
         [JsonIgnore]
         public ICollection<Prestamo> Prestamos { get; set; } // Relación uno a muchos con Prestamo
 
