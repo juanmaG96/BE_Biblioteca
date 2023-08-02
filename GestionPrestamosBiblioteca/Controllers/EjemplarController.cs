@@ -72,7 +72,8 @@ namespace GestionPrestamosBiblioteca.Controllers
                     CodigoInventario = ejemplar.CodigoInventario,
                     CodigoUbicacion = ejemplar.CodigoUbicacion,
                     FechaAlta = ejemplar.FechaAlta,
-                    Prestado = false
+                    Prestado = false,
+                    ISBN = isbn
                 };
 
                 libro.Ejemplares.Add(nuevoEjemplar); // Agregar el nuevo ejemplar a la colección de ejemplares de la clase libros
@@ -143,6 +144,7 @@ namespace GestionPrestamosBiblioteca.Controllers
                         ejemplarExistente.CodigoUbicacion = ejemplar.CodigoUbicacion;
                         ejemplarExistente.FechaAlta = ejemplar.FechaAlta;
                         ejemplarExistente.Prestado = ejemplar.Prestado;
+                        ejemplarExistente.ISBN = ejemplar.ISBN;
                     }
                 }
 
